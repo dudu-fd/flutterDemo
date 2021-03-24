@@ -143,3 +143,178 @@ class ShowSnackBarWidget extends StatelessWidget {
   }
 }
 
+/* Widget 状态管理演示*/
+
+// TapboxA 管理自身状态
+class TapboxA extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _TapboxAState();
+}
+
+class _TapboxAState extends State<TapboxA> {
+  bool _active = false;
+
+  // 处理点击事件
+  void _handleTap() {
+    setState(() {
+      _active = !_active;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: _handleTap,
+      child: Container(
+        child: Center(
+          child: Text(
+            _active ? "Active" : "Inactive",
+            style: TextStyle(fontSize: 32, color: Colors.white),
+          ),
+        ),
+        width: 200,
+        height: 200,
+        decoration: BoxDecoration(
+            color: _active ? Colors.lightGreen[700] : Colors.grey[600]),
+      ),
+    );
+  }
+}
+
+// ParentWidget 为 TapboxB 管理状态
+class ParentWidget extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _ParentWidgetState();
+}
+
+class _ParentWidgetState extends State<ParentWidget> {
+  bool _active = false;
+
+  void _handleTapboxChanged(bool newValue) {
+    setState(() {
+      _active = newValue;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return TapboxB(active: _active, onChanged: _handleTapboxChanged);
+  }
+}
+
+class TapboxB extends StatelessWidget {
+  final bool active;
+  final ValueChanged<bool> onChanged;
+
+  TapboxB({Key key, @required this.active, @required this.onChanged})
+      : super(key: key);
+
+  void _handleTap() {
+    onChanged(!active);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: _handleTap,
+      child: Container(
+        child: Center(
+          child: Text(
+            active ? "Active" : "Inactive",
+            style: TextStyle(fontSize: 32, color: Colors.white),
+          ),
+        ),
+        width: 200,
+        height: 200,
+        decoration: BoxDecoration(
+            color: active ? Colors.lightGreen[700] : Colors.grey[600]),
+      ),
+    );
+  }
+}
+
+// ParentWidget 和 TapboxC 混合管理状态
+
+class ParentWidgetC extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _ParentWidgetCState();
+}
+
+class _ParentWidgetCState extends State<ParentWidgetC> {
+  bool _active = false;
+
+  void _handleTapboxChanged(bool newValue) {
+    setState(() {
+      _active = newValue;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return TapboxC(active: _active, onChanged: _handleTapboxChanged);
+  }
+}
+
+class TapboxC extends StatefulWidget {
+  final bool active;
+
+  final ValueChanged<bool> onChanged;
+
+  TapboxC({Key key, @required this.active, @required this.onChanged})
+      : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() => _TapboxCState();
+}
+
+// 自身管理高亮状态
+class _TapboxCState extends State<TapboxC> {
+  bool _highlight = false;
+
+  void _handleTapDown(TapDownDetails details) {
+    setState(() {
+      _highlight = true;
+    });
+  }
+
+  void _handleTapUp(TapUpDetails details) {
+    setState(() {
+      _highlight = false;
+    });
+  }
+
+  void _handleTapCancel() {
+    setState(() {
+      _highlight = false;
+    });
+  }
+
+  void _handleTap() {
+    widget.onChanged(!widget.active);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: _handleTap,
+      onTapDown: _handleTapDown,
+      onTapUp: _handleTapUp,
+      onTapCancel: _handleTapCancel,
+      child: Container(
+        child: Center(
+          child: Text(
+            widget.active ? "Active" : "Inactive",
+            style: TextStyle(fontSize: 32, color: Colors.white),
+          ),
+        ),
+        width: 200,
+        height: 200,
+        decoration: BoxDecoration(
+            color: widget.active ? Colors.lightGreen[700] : Colors.grey[600],
+            border: _highlight
+                ? Border.all(color: Colors.teal[100], width: 100)
+                : null),
+      ),
+    );
+  }
+}
