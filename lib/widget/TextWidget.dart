@@ -3,16 +3,16 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 /*
-  data:                 String	             要显示的文字
-  style:	              TextStyle	           文本样式
-  strutStyle:	          StrutStyle	         设置每行的最小行高
-  textAlign:	          TextAlign	           文本的对齐方式	，只有 Widget 的大小大于文本内容时才有意义
-  textDirection:	      TextDirection	       文字方向
-  locale:	              Locale	             用于选择用户语言和格式设置首选项的标识符
-  softWrap:	            bool	               是否支持软换行符，如果是 false 的话，这个文本只有一行，水平方向是无限的
-  overflow:	            TextOverflow	       文本的截断方式
-  textScaleFactor:    	double	             代表文本相对于当前字体大小的缩放因子，默认值为1.0，字体大小会跟随系统字体大小而变化
-  maxLines:	            int	                 显示的最大行数
+  data:                 String	              要显示的文字
+  style:	              TextStyle	            文本样式
+  strutStyle:	          StrutStyle	          设置每行的最小行高
+  textAlign:	          TextAlign	            文本的对齐方式	，只有 Widget 的大小大于文本内容时才有意义
+  textDirection:	      TextDirection	        文字方向
+  locale:	              Locale	              用于选择用户语言和格式设置首选项的标识符
+  softWrap:	            bool	                是否支持软换行符，如果是 false 的话，这个文本只有一行，水平方向是无限的
+  overflow:	            TextOverflow	        文本的截断方式
+  textScaleFactor:    	double	              代表文本相对于当前字体大小的缩放因子，默认值为1.0，字体大小会跟随系统字体大小而变化
+  maxLines:	            int	                  显示的最大行数
 */
 
 /*
