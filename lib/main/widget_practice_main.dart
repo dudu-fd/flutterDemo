@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'file:///G:/flutter_project/flutter_demo/lib/widget/widget_practice.dart';
+import 'package:flutter_demo/widget/widget_practice.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget{
         // body:ShowSnackBarWidget(),
         // body:TapboxA(),
         // body:ParentWidget(),
-        body:ParentWidgetC(),
+        body: ParentWidgetC(),
       ),
     );
   }
