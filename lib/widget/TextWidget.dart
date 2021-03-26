@@ -59,9 +59,9 @@ class TextInTextStyle extends StatelessWidget {
         inherit: false,
         // color: Colors.blue,
         // background: Paint()..color = Colors.yellow,
-        fontSize: 20,
+        fontSize: 22,
         // 感觉默认字体为14
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.normal,
         fontStyle: FontStyle.italic,
         letterSpacing: 0,
         wordSpacing: 5,
@@ -71,7 +71,7 @@ class TextInTextStyle extends StatelessWidget {
         decoration: TextDecoration.underline,
         decorationColor: Colors.blue,
         decorationStyle: TextDecorationStyle.wavy,
-        decorationThickness: 1.5,
+        decorationThickness: 1.6,
         fontFamily: "SourceSansPro",
         shadows: [
           BoxShadow(
