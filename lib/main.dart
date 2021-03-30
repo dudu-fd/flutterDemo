@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/widget/ButtonWidget.dart';
 import 'package:flutter_demo/widget/ImageAndIconWidget.dart';
+import 'package:flutter_demo/widget/ProgressIndicatorWidget.dart';
 import 'package:flutter_demo/widget/SwitchAndCheckBoxWidget.dart';
 import 'package:flutter_demo/widget/TextFieldAndFormWidget.dart';
 import 'package:flutter_demo/widget/TextWidget.dart';
@@ -21,7 +22,9 @@ class MyApp extends StatelessWidget{
         // body:ButtonWidget(),
         // body:ImageOrIconWidget(),
         // body:SwitchAndCheckBoxWidget(),
-        body:TextFieldAndFormWidget(),
+        // body:TextFieldAndFormWidget(),
+        body:ProgressIndicatorWidget(),
+        // body:ProgessIndicatorInAnimation(),
       ),
     );
   }
