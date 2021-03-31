@@ -16,6 +16,7 @@ import 'package:flutter/material.dart';
 */
 
 /*                TextStyle 的主要参数及作用
+
   inherit:	            bool	                是否继承父 Text 的样式，默认为 true
   color:	              Color	                文字的颜色
   fontSize:	            double	              文字的大小，不会跟随系统字体大小而变化

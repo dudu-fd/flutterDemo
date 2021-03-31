@@ -27,6 +27,7 @@ import 'package:flutter_demo/utils/MyIcons.dart';
 */
 
 /*                InputDecoration 的主要参数及作用
+
     icon:         	        Icon	                   输入框前面的图标，会在下滑线外边
     prefixIcon:          	  Icon                     输入框前面的图标，会在下滑线里边
     suffixIcon:         	  Icon	                   输入框后面的图标，会在下滑线里边

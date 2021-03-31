@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /*                          ButtonStyle 的主要参数及作用
+
     textStyle:            	MaterialStateProperty<TextStyle?>	                  TextStyle 所有的属性都可以用，要是设置文本的
     backgroundColor:      	MaterialStateProperty<Color?>      	                设置按钮的背景色
     foregroundColor:     	  MaterialStateProperty<Color?>    	                  前景色，如果 textStyle 已经设置，优先用 textStyle 的
