@@ -57,7 +57,21 @@ class StackAndPositionedWidget extends StatelessWidget {
             child: Text("I am nothing"),
             left: 10,
             top: 15,
-          )
+          ),
+          Align(
+              // alignment: Alignment.bottomRight,
+              // alignment: FractionalOffset(1, 0),
+              // alignment: Alignment(1, 0),
+              alignment: Alignment.centerRight,
+              child: Container(
+                color: Colors.green,
+                width: 100,
+                height: 100,
+                child: Text(
+                  "I am Align",
+
+                ),
+              ))
         ],
       ),
     );

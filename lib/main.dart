@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/container/PaddingWidget.dart';
+import 'package:flutter_demo/layout/AlignAndCenterWidget.dart';
 import 'package:flutter_demo/layout/FlexWidget.dart';
 import 'package:flutter_demo/layout/FlowAndWrapWidget.dart';
 import 'package:flutter_demo/layout/RowAndColumnWidget.dart';
@@ -33,7 +35,9 @@ class MyApp extends StatelessWidget{
         // body:RowAndColumnWidget(),
         // body:FlexWidget(),
         // body:FlowAndWrapWidget(),
-        body:StackAndPositionedWidget(),
+        // body:StackAndPositionedWidget(),
+        // body:AlignAndCenterWidget(),
+        body:PaddingWidget(),
       ),
     );
   }
