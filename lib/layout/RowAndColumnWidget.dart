@@ -50,7 +50,7 @@ class RowWidget extends StatelessWidget {
               "hello world",
               style: TextStyle(fontSize: 30),
             ),
-            Text("I am dudu")
+            Text("I am dudu！")
           ],
         ),
         Column(
