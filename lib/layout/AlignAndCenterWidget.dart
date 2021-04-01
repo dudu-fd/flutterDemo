@@ -2,7 +2,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-/* 代码演示 */
 class AlignAndCenterWidget extends StatelessWidget{
 
   @override
@@ -11,6 +10,7 @@ class AlignAndCenterWidget extends StatelessWidget{
   }
 }
 
+/*对齐控件*/
 class AlignWidget extends StatelessWidget{
 
   @override
