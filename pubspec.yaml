@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  english_words: ^4.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -70,6 +71,10 @@ flutter:
      - family: myIcon
        fonts:
          - asset: fonts/iconfont.ttf
+
+     - family: myIcon3
+       fonts:
+         - asset: fonts/planet.ttf
 
      - family: myIcon2
        fonts:
