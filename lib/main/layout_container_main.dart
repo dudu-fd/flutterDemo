@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/container/BoxWidget.dart';
-import 'package:flutter_demo/container/ClipWidget.dart';
 import 'package:flutter_demo/container/ContainerWidget.dart';
 import 'package:flutter_demo/container/DecoratedBoxWidget.dart';
 import 'package:flutter_demo/container/PaddingWidget.dart';
@@ -50,8 +49,7 @@ class MyApp extends StatelessWidget{
         // body:BoxWidget(),
         // body:DecoratedBoxWidget(),
         // body:TransformWidget(),
-        // body:ContainerWidget(),
-        body:ClipWidget(),
+        body:ContainerWidget(),
       ),
     );
   }
