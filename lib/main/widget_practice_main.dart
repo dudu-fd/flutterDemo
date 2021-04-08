@@ -15,11 +15,11 @@ class MyApp extends StatelessWidget{
         appBar: AppBar(title: Text("Flutter Demo"),),
         // body: Echo(text: "hello world",),
         // body: ContextRoute(),
-        // body: CounterWidget(initValue: 10,),
+        body: CounterWidget(initValue: 11,),
         // body:ShowSnackBarWidget(),
         // body:TapboxA(),
         // body:ParentWidget(),
-        body: ParentWidgetC(),
+        // body: ParentWidgetC(),
       ),
     );
   }

@@ -69,7 +69,7 @@ class _CounterWidgetState extends State<CounterWidget> {
         child: TextButton(
       child: Text(
         "$_counter",
-        style: TextStyle(fontSize: 32),
+        style: TextStyle(fontSize: 33),
       ),
       // 点击后计数器自增
       onPressed: () {
